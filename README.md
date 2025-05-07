@@ -65,14 +65,13 @@ Expression: 5 + 3 * 2
 
 Constructed AST:
 
-scss
-Copy
-Edit
 BinaryOperationNode('+')
 ├── left: NumberNode(5)
 └── right: BinaryOperationNode('*')
     ├── left: NumberNode(3)
     └── right: NumberNode(2)
+
+    
 🎨 Why JavaFX?
 JavaFX provides a modern GUI framework for Java with:
 
@@ -114,6 +113,7 @@ Code editor with syntax highlighting
 
 👨‍💻 Author
 Developed by Ankit Das, Aaryan Brar, Deepanshu Mehra, Anjali
+
 Built as an educational project to understand compilers, interpreters, and language tooling.
 
 
