@@ -39,38 +39,6 @@ Math Functions:
 sin(0.5)
 log(10) + sqrt(16)
 Matrices:
-
-
-let A = [[1, 2], [3, 4]]
-let B = [[5, 6], [7, 8]]
-A + B
-2 * A
-A * B
-Show Variable:
-
-
-show A
-🛠 Project Structure
-
-src/
-├── lexer/         # Tokenization
-├── parser/        # AST construction
-├── ast/           # AST node definitions
-├── evaluator/     # Expression evaluation logic
-├── repl/          # CLI-based REPL
-├── gui/           # JavaFX GUI interface
-└── Main.java      # Main entry point
-🌳 Sample AST
-Expression: 5 + 3 * 2
-
-Constructed AST:
-
-BinaryOperationNode('+')
-├── left: NumberNode(5)
-└── right: BinaryOperationNode('*')
-    ├── left: NumberNode(3)
-    └── right: NumberNode(2)
-
     
 🎨 Why JavaFX?
 JavaFX provides a modern GUI framework for Java with:
