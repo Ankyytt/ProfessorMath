@@ -1,5 +1,4 @@
-
-🧮 ProfessorMath
+🧮 **ProfessorMath**
 
 **A MATLAB-inspired interpreted language for beginners — built in Java.**
 
@@ -65,7 +64,7 @@ ProfessorMath is a lightweight interpreted language built to simulate core featu
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/professormath.git
+git clone https://github.com/Ankyytt/ProfessorMath/tree/main
 cd professormath
 
 # Compile the source files
@@ -135,14 +134,6 @@ Here’s a high-level view of how ProfessorMath works:
 * **Evaluator:** Executes AST nodes and returns results.
 * **REPL:** For command-line testing and debugging.
 * **GUI:** A JavaFX-powered visual playground for input and output.
-
----
-
-## 🎨 GUI Showcase
-
-*(Add screenshots or gifs here once available)*
-
-> GUI built using JavaFX with modern layout and interactive evaluation support.
 
 ---
 
