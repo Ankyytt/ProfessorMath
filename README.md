@@ -1,87 +1,204 @@
-# ProfessorMath
-A Matlab inspired Coding Language for beginners
-🧮
-A minimalistic, expression-oriented interpreted programming language built in Java. MyLang supports arithmetic, variable bindings, matrix operations, functions, and a REPL interface, along with a JavaFX GUI.
+Here is your full, clean, and polished `README.md` written as a single cohesive file, ready to be placed directly in your GitHub repository:
 
-This project was created for learning how to build interpreters, abstract syntax trees (ASTs), parsing, evaluation, and integrating a frontend.
+---
 
-📦 Features
-✅ Arithmetic operations: +, -, *, /, ^
+````markdown
+# 🧮 ProfessorMath
 
-✅ Parentheses and operator precedence
+**A MATLAB-inspired interpreted language for beginners — built in Java.**
 
-✅ Built-in math functions: sin, cos, log, sqrt, etc.
+ProfessorMath is a beginner-friendly, expression-oriented language designed for learning how programming languages, interpreters, and ASTs work. It supports arithmetic, variables, matrix operations, and includes both a REPL and a JavaFX GUI.
 
-✅ Variable assignment using let: let x = 5
+Whether you're a CS student, hobbyist, or aspiring compiler nerd — this project is for you!
 
-✅ Matrix support: [[1, 2], [3, 4]]
+---
 
-✅ Matrix operations: addition, multiplication, scalar ops
+## 📖 Table of Contents
 
-✅ Display values using show keyword
+- [About](#about)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the REPL](#running-the-repl)
+  - [Running the GUI](#running-the-gui)
+- [Usage Examples](#usage-examples)
+- [Architecture](#architecture)
+- [GUI Showcase](#gui-showcase)
+- [Built With](#built-with)
+- [Roadmap / Future Features](#roadmap--future-features)
+- [Contributors](#contributors)
+- [License](#license)
 
-✅ REPL (command-line interface) and JavaFX GUI
+---
 
-✅ JSON serialization of expressions
+## 📖 About
 
-✨ Demo Commands
-Try the following in the REPL or GUI:
+ProfessorMath is a lightweight interpreted language built to simulate core features of MATLAB and other mathematical scripting environments. Its goal is to help beginners understand how programming languages are parsed, interpreted, and executed — while enabling basic numerical and matrix computations.
 
-Basic Arithmetic:
+---
 
+## 📦 Features
+
+- ✅ Arithmetic: `+`, `-`, `*`, `/`, `^`
+- ✅ Operator precedence and parentheses
+- ✅ Variable assignments using `let`
+- ✅ Built-in math functions: `sin`, `cos`, `log`, `sqrt`, etc.
+- ✅ Matrix literals and operations
+- ✅ Scalar-matrix operations
+- ✅ `show` keyword for output display
+- ✅ Command-line REPL
+- ✅ JavaFX-powered GUI
+- ✅ JSON-based expression serialization
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+- Java 11 or higher
+- JavaFX SDK (for running the GUI)
+- Git (for cloning the repository)
+
+> 💡 JavaFX must be properly configured in your IDE (e.g., IntelliJ or Eclipse).
+
+---
+
+### 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/professormath.git
+cd professormath
+
+# Compile the source files
+javac -d bin src/**/*.java
+````
+
+---
+
+### 🧑‍💻 Running the REPL
+
+```bash
+java -cp bin repl.Repl
+```
+
+---
+
+### 🖥️ Running the GUI
+
+Make sure JavaFX is correctly set up in your IDE, then run:
+
+```bash
+# In your IDE, run:
+gui/Main.java
+```
+
+---
+
+## 💡 Usage Examples
+
+```plaintext
+# Variable arithmetic
 let x = 5
 let y = 3
-x + y
-(2 + 3) * 4 - 1
-Math Functions:
+x + y           => 8
+(2 + 3) * 4 - 1 => 19
 
+# Built-in functions
+sin(0.5)        => 0.479...
+log(10)         => 2.302...
+sqrt(16)        => 4.0
 
-sin(0.5)
-log(10) + sqrt(16)
-Matrices:
-    
-🎨 Why JavaFX?
-JavaFX provides a modern GUI framework for Java with:
+# Matrix creation and math
+let A = [[1, 2], [3, 4]]
+let B = [[5, 6], [7, 8]]
+A + B           => [[6, 8], [10, 12]]
+A * B           => Matrix multiplication
+show A          => Prints matrix
+```
 
-Rich UI controls
+---
 
-CSS-style styling
+## 🏗️ Architecture
 
-Tight integration with Java logic
+Here’s a high-level view of how ProfessorMath works:
 
-Easy event handling
+```
+  Input → Lexer → Parser → AST → Evaluator → Output
+                             ↓
+                           (REPL or GUI)
+```
 
-Alternatives like Swing or web were avoided to keep integration simple and native.
+### 🔍 Components
 
-🚀 Running the Project
-Clone the repository:
+* **Lexer:** Tokenizes raw input.
+* **Parser:** Builds the abstract syntax tree (AST).
+* **AST Nodes:** Represent expressions like binary ops, function calls, variables, etc.
+* **Evaluator:** Executes AST nodes and returns results.
+* **REPL:** For command-line testing and debugging.
+* **GUI:** A JavaFX-powered visual playground for input and output.
 
-Without GUI (REPL):
+---
 
-javac -d bin src/**/*.java
-java -cp bin repl.Repl
-With GUI (JavaFX):
+## 🎨 GUI Showcase
 
-Make sure JavaFX is configured in your IDE
+*(Add screenshots or gifs here once available)*
 
-Run gui/Main.java
+> GUI built using JavaFX with modern layout and interactive evaluation support.
 
-🧠 Future Improvements
-Matrix inverse and determinant
+---
 
-Custom functions and user-defined operators
+## 🧰 Built With
 
-Control flow (if, while)
+* 🟦 Java 17
+* 🎨 JavaFX
+* 🔁 Custom recursive descent parser
+* 🔧 JSON (for expression serialization)
+* 🧠 Core interpreter principles: AST, evaluation, environment
 
-File import/export for variables
+---
 
-Advanced error reporting
+## 🧠 Roadmap / Future Features
 
-Code editor with syntax highlighting
+* [ ] Matrix inverse & determinant
+* [ ] Custom user-defined functions
+* [ ] Control flow: `if`, `while`
+* [ ] File import/export for variable storage
+* [ ] Enhanced error reporting with line/column tracking
+* [ ] Built-in constants like `pi`, `e`, etc.
+* [ ] JavaFX code editor with syntax highlighting
 
-👨‍💻 Author
-Developed by Ankit Das, Aaryan Brar, Deepanshu Mehra, Anjali
+---
 
-Built as an educational project to understand compilers, interpreters, and language tooling.
+## 👥 Contributors
 
+Made with 💻 and ☕ by:
 
+* **Ankit Das**
+* **Aaryan Brar**
+* **Deepanshu Mehra**
+* **Anjali**
+
+> Built as an educational project to explore the inner workings of interpreters and compilers.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+Feel free to fork, learn, and contribute!
+
+```
+
+---
+
+Let me know if you'd like:
+- A `LICENSE` file for MIT
+- A `CONTRIBUTING.md`
+- GitHub badge markup
+- Syntax-highlighted code editor recommendations for your GUI
+
+You're all set to publish this project like a pro 🚀
+```
